@@ -1,6 +1,6 @@
 UW-EE399-Assignment-4
 =========
-This holds the code and backing for the fourth assignment of the EE399 class. 
+This holds the code and backing for the fourth assignment of the EE399 class. The main dataset this assignment revolves around is the MNIST 784 which is a set of 70000 28x28 images of digits. These digits are processed in order to be categorized by the PCA method. After the dimensions have been reduced, the data 
 
 Project Author: Elijah Reeb, elireeb@uw.edu
 
