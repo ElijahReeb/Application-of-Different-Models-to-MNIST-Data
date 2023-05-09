@@ -65,6 +65,7 @@ After the model infrastructure is set up, the model is trained. A few commands a
             optimizer.step()  # update the weights
 
 Finally, after the model has been trained the model is tested on the test data set. This is a similar process except the weights are not altered upon later epochs. The data is also tested on the training data to observe the training error of the final model. 
+
 .. code-block:: text
 
         with torch.no_grad():
