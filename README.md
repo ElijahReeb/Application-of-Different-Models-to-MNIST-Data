@@ -6,23 +6,70 @@ Project Author: Elijah Reeb, elireeb@uw.edu
 
 .. contents:: Table of Contents
 
-Homework 3
+Homework 4
 ---------------------
 Introduction
 ^^^^^^^^^^^^
 
+
 Theoretical Backgroud
 ^^^^^^^^^^^^
 
-.. image:: https://user-images.githubusercontent.com/130190276/234205018-f10e3564-15c3-410e-b52f-caf0494845ca.png
+.. image:: 
 
 
 Algorithm Implementation and Development
 ^^^^^^^^^^^^
+With the ease of pytorch packages, FFNN code is simple to develop. After importing the necessary tools 4 main functions are called in order to 
+
 .. code-block:: text
 
-        svd = TruncatedSVD(n_components=70)
-        X_svd = svd.fit_transform(X)
+        class Net(nn.Module):
+                def __init__(self):
+                super(Net, self).__init__()
+                self.fc1 = nn.Linear(1, 20)
+                self.fc2 = nn.Linear(20, 10)
+                self.fc3 = nn.Linear(10, 1)
+
+Next 
+
+.. code-block:: text
+
+         def forward(self, x):
+                x = torch.relu(self.fc1(x))
+                x = torch.relu(self.fc2(x))
+                x = self.fc3(x)
+                return x
+
+After this 
+
+.. code-block:: text
+
+        net = Net()
+        criterion = nn.MSELoss()
+        optimizer = torch.optim.SGD(net.parameters(), lr=0.05)
+
+        for epoch in range(1000):
+            optimizer.zero_grad()  # zero the gradient buffers
+            outputs_pred = net(inputs)  # forward pass
+            loss = criterion(outputs_pred, outputs)  # calculate the loss
+            loss.backward()  # backward pass
+            optimizer.step()  # update the weights
+
+Finally, 
+
+.. code-block:: text
+
+        with torch.no_grad():
+            outputs_pred = net(testinputs)
+            loss = criterion(outputs_pred, testoutputs)
+            train_pred = net(inputs)
+            trainloss = criterion(train_pred, outputs)
+            print(f"Loss: {loss}")
+            print(f"Training Loss: {loss}")
+
+These simple code blocks allow one to create and train a neural net on a set of data. 
+
 
 Computational Results
 ^^^^^^^^^^^^
