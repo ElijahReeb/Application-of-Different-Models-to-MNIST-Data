@@ -1,6 +1,6 @@
 UW-EE399-Assignment-4
 =========
-This holds the code and backing for the fourth assignment of the EE399 class. The main dataset this assignment revolves around is the MNIST 784 which is a set of 70000 28x28 images of digits. These digits are processed in order to be categorized by the PCA method. After the dimensions have been reduced, the data 
+This holds the code and backing for the fourth assignment of the EE399 class. The main dataset this assignment revolves around is the MNIST 784 which is a set of 70000 28x28 images of digits. These digits are processed in order to be categorized by the PCA method. After the dimensions have been reduced, the data is fit with a FFNN a LSTM a SVM and a Decision Tree model in order to compare their effectiveness. 
 
 Project Author: Elijah Reeb, elireeb@uw.edu
 
@@ -10,7 +10,8 @@ Homework 4
 ---------------------
 Introduction
 ^^^^^^^^^^^^
-
+This assignment involves two main parts. The first involves fitting a neural network to the data from Homework Assignment 1 (see https://github.com/ElijahReeb/UW-EE399-Assignment-1). These 30 points were split in order to just compare a neural network to a simple linear regression model. 
+The second part involves the MNIST dataset. After a 20 component Principle Component Analysis (PCA) 
 
 Theoretical Backgroud
 ^^^^^^^^^^^^
