@@ -1,4 +1,4 @@
-UW-EE399-Assignment-4
+Comparison of Different ML Models to MNIST Data
 =========
 This holds the code and backing for the fourth assignment of the EE399 class. The main dataset this assignment revolves around is the MNIST 784 which is a set of 70000 28x28 images of digits. These digits are processed in order to be categorized by the PCA method. After the dimensions have been reduced, the data is fit with a FFNN a LSTM a SVM and a Decision Tree model in order to compare their effectiveness. 
 
